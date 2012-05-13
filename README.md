@@ -1,7 +1,7 @@
 #is.js
 is.js is a micro javascript library that allow you to do conditions more faster.
 
-###Example:
+###Examples:
 
 ```js
 // Object functions:
@@ -22,4 +22,55 @@ if(str.isString()){
 if(is.desktop()){
   // do stuffs here
 }
+```
+
+##Object functions
+```js
+isArray()
+isBoolean()
+isDate()
+isEmpty()
+isEven()
+isFloat()
+isFunction()
+isInteger()
+isMultipleOf(number)
+isNaN()
+isNumber()
+isObject()
+isOdd()
+isOwnProperty(prop)
+isRegExp()
+isSameType(obj2)
+isString()
+isType(type)
+```
+
+##Core functions
+```js
+// Browsers
+ie()
+firefox()
+gecko()
+opera()
+safari()
+chrome()
+webkit()
+
+// Device
+mobile()
+tablet()
+desktop()
+kindle()
+tv()
+
+// Online / Offline mobile only
+online()
+offline()
+
+// OS
+windows()
+mac()
+unix()
+linux()
 ```

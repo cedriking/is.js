@@ -107,6 +107,9 @@ var is = (function(){
 		online: function(){
 			return (navigator.onLine);
 		},
+		offline: function(){
+			return !this.online();
+		},
 		windows: function(){
 			return (/win/i).test(av);
 		},
