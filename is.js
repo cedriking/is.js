@@ -1,6 +1,7 @@
 // is.js 1.0 ~ Copyright (c) 2012 Cedrik Boudreau
 // http://isjs.quipoapps.com
 // is.js may be freely distributed under the MIT licence.
+
 var is = (function(){
 	var object = Object, proto = object.prototype, ua = (window.navigator && navigator.userAgent) || "", av = (window.navigator && navigator.appVersion) || "",
 	isClass = function(obj, klass){
