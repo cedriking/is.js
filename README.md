@@ -1,5 +1,5 @@
 #is.js
-is.js is a micro javascript library that allow you to do conditions more faster.
+is.js is a micro javascript library that allows you to do conditions faster.
 
 ###Examples:
 
