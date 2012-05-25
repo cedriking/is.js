@@ -1,6 +1,21 @@
-// is.js 1.0 ~ Copyright (c) 2012 Cedrik Boudreau
+// is.js 1.1 ~ Copyright (c) 2012 Cedrik Boudreau
 // http://isjs.quipoapps.com
 // is.js may be freely distributed under the MIT licence.
+
+if (!Array.prototype.forEach) {
+	Array.prototype.forEach = function(func) {
+		var len = this.length;
+		if (typeof func != "function")
+			throw new TypeError();
+
+		var thisp = arguments[1];
+		for (var i = 0; i < len; i++) {
+			if (i in this)
+				fun.call(thisp, this[i], i, this);
+		}
+	};
+}
+
 var is = (function(){
 	var object = Object, proto = object.prototype, ua = (window.navigator && navigator.userAgent) || "", av = (window.navigator && navigator.appVersion) || "",
 	isClass = function(obj, klass){
@@ -70,6 +85,18 @@ var is = (function(){
 	return {
 		ie: function(){
 			return (/msie/i).test(ua);
+		},
+		ie6: function(){
+			return (/msie 6/i).test(ua);
+		},
+		ie7: function(){
+			return (/msie 7/i).test(ua);
+		},
+		ie8: function(){
+			return (/msie 8/i).test(ua);
+		},
+		ie9: function(){
+			return (/msie 9/i).test(ua);
 		},
 		firefox: function(){
 			return (/firefox/i).test(ua);
