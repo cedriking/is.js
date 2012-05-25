@@ -2,8 +2,9 @@
 // http://isjs.quipoapps.com
 // is.js may be freely distributed under the MIT licence.
 
+// Fixing ECMA262-5 array method if not supported natively (old IE versions) 
 if (!Array.prototype.forEach) {
-	Array.prototype.forEach = function(func) {
+	Array.prototype.forEach = function(func /*, opt*/) {
 		var len = this.length;
 		if (typeof func != "function")
 			throw new TypeError();
