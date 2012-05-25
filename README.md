@@ -50,6 +50,10 @@ isType(type)
 ```js
 // Browsers
 ie()
+ie6()
+ie7()
+ie8()
+ie9()
 firefox()
 gecko()
 opera()
@@ -74,3 +78,8 @@ mac()
 unix()
 linux()
 ```
+
+###Change Log:
+#### Version 1.1
+- Now is.js is working for Internet Explorer 6+
+- Added is.ie6(), is.ie7(), is.ie8() and is.ie9()
