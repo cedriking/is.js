@@ -14,7 +14,7 @@ str.isArray(); // returns false
 is.windows();
 is.chrome();
 is.mobile();
-is.online(); // for mobile
+is.online();
 
 if(str.isString()){
   // do stuffs here
@@ -68,7 +68,7 @@ desktop()
 kindle()
 tv()
 
-// Online / Offline mobile only
+// Online / Offline
 online()
 offline()
 
