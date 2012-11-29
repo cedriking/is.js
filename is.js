@@ -1,4 +1,4 @@
-// is.js 1.1 ~ Copyright (c) 2012 Cedrik Boudreau
+// is.js 1.2 ~ Copyright (c) 2012 Cedrik Boudreau
 // http://isjs.quipoapps.com
 // is.js may be freely distributed under the MIT licence.
 
@@ -18,7 +18,7 @@ if (!Array.prototype.forEach) {
 }
 
 var is = (function(){
-	var object = Object, proto = object.prototype, ua = (window.navigator && navigator.userAgent) || "", av = (window.navigator && navigator.appVersion) || "",
+	var object = Object, proto = object.prototype, ua = (window.navigator && navigator.userAgent) || "", av = (window.navigator && navigator.appVersion) || "", dateP = Date.prototype,
 	isClass = function(obj, klass){
 		return proto.toString.call(obj) === '[object '+klass+']';
 	},
@@ -79,6 +79,38 @@ var is = (function(){
 		},
 		isType: function(type){
 			return isClass(this, type);
+		},
+		/* Added in version 1.2 */
+		isBlank: function(){
+			return this.trim().length === 0;
+		}
+	});
+	
+	extend(dateP, {
+		isPast: function(){
+			return this.getTime() < new date().getTime();
+		},
+		isFuture: function(){ 
+			return this.getTime() > new date().getTime(); 
+		},
+		isWeekday: function(){
+			return this.getUTCDay() > 0 && this.getUTCDay() < 6;
+		},
+		isWeekend: function(){
+			return this.getUTCDay() === 0 || this.getUTCDay() === 6;
+		},
+		isBefore: function(d){ // d  = new Date()
+			return this.getTime() < d.getTime();
+		},
+		isAfter: function(d){ // d = new Date()
+			return this.getTime() > d.getTime();
+		},
+		isLeapYear: function(){
+			var year = this.getFullYear();
+			return (year % 4 === 0 && year % 100 !== 0) || (year % 400 === 0);
+		},
+		isValid: function(){
+			return !this.getTime().isNaN();
 		}
 	});
 
