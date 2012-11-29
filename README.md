@@ -6,9 +6,14 @@ is.js is a micro javascript library that allows you to do conditions faster.
 ```js
 // Object functions:
 var str = 'my string';
-str.isString(); // returns true
-str.isEmpty(); // returns false
-str.isArray(); // returns false
+str.isString(); // return true
+str.isEmpty(); // return false
+str.isArray(); // return false
+
+// new in v1.2
+str.isBlank();   // return false
+''.isBlank();    // return true
+'   '.isBlank(); // return true
 
 // also is.js have some core functions:
 is.windows();
@@ -44,6 +49,22 @@ isRegExp()
 isSameType(obj2)
 isString()
 isType(type)
+isBlank() // new in version 1.2
+```
+
+##Special Date functions (added in v1.2)
+var d = new Date();
+d.isWeekend(); // return true if is a weekend.
+d.isValid(); // return true.
+```js
+isPast()
+isFuture()
+isWeekday()
+isWeekend()
+isBefore(date)
+isAfter(date)
+isLeapYear()
+isValid()
 ```
 
 ##Core functions
@@ -80,6 +101,10 @@ linux()
 ```
 
 ###Change Log:
+#### Version 1.2
+- Added new validators for the Dates
+- Added isBlank for a string
+
 #### Version 1.1
 - Now is.js is working for Internet Explorer 6+
 - Added is.ie6(), is.ie7(), is.ie8() and is.ie9()
