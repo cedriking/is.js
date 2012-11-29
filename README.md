@@ -53,10 +53,11 @@ isBlank() // new in version 1.2
 ```
 
 ##Special Date functions (added in v1.2)
+```js
 var d = new Date();
 d.isWeekend(); // return true if is a weekend.
 d.isValid(); // return true.
-```js
+
 isPast()
 isFuture()
 isWeekday()
