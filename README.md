@@ -61,6 +61,11 @@ isBlank() // new in version 1.2
 ```js
 var str = "this is my string";
 str.isCC( /* optional type */ ) // Credit Card, also you can use str.isCreditCard()
+isEmail()
+isLatLng() or isLatLong()
+isPhone( /* optional country code, default = 'us' */ )
+isZip( /* optional country code, default = 'us' */ )
+
 /*
 isCC and isCreditCard have the parameter type, where you can pass a string:
 'any' => any kind of credit card
@@ -68,19 +73,10 @@ isCC and isCreditCard have the parameter type, where you can pass a string:
 'Discover'
 'mc' or 'MasterCard'
 'Visa'
-to verify if the string is one of this kind of credit cards.
-*/
 
-isEmail()
-isLatLng() or isLatLong()
-isPhone( /* optional country code, default = 'us' */ )
-/*
 Country codes for isPhone are:
 ar, au, ca, fr, is, uk and us
-*/
 
-isZip( /* optional country code, default = 'us' */ )
-/*
 Country codes for isZip are:
 ar, au, at, be, br, ca, dk, de, es, gb, hu, is, it, jp, lu, nl, pl, se and us
 */
