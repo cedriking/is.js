@@ -57,7 +57,7 @@ isType(type)
 isBlank() // new in version 1.2
 ```
 
-##Special Date functions (added in v1.3)
+##Special String functions (added in v1.3)
 ```js
 var str = "this is my string";
 str.isCC( /* optional type */ ) // Credit Card, also you can use str.isCreditCard()
