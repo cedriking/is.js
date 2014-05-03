@@ -92,8 +92,8 @@ var d = new Date();
 d.isWeekend(); // return true if is a weekend.
 d.isValid(); // return true.
 
-isPast()
-isFuture()
+isPast( /* optional date */ )
+isFuture( /* optional date */ )
 isWeekday()
 isWeekend()
 isBefore(date)
@@ -101,10 +101,9 @@ isAfter(date)
 isLeapYear()
 isValid()
 /*
-Some date functions have been changed to receive an optional Date to compare :
-isPast( date )
-isFuture( date )
-Example:
+Some date functions have been changed in v1.3
+to receive an optional Date to compare example:
+
 var d2 = new Date();
 d.isPast( d2 ); // d is past of d2, true
 d.isFuture( d2 ); // d is future of d2, false
