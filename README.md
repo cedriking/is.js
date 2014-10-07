@@ -82,8 +82,8 @@ str.isString(); // will return **true**
 
 ##Special String functions (added in v1.3)
 ```js
-isCC()
-isCreditCard()
+isCC( /* optional type */ )
+isCreditCard( /* optional type */ )
 isEmail()
 isLatLng() or isLatLong()
 isPhone( /* optional country code, default = 'us' */ )
@@ -106,7 +106,7 @@ ar, au, at, be, br, ca, dk, de, es, gb, hu, is, it, jp, lu, nl, pl, se and us
 
 // Example:
 var str = "5196255216134695";
-str.isCC( /* optional type */ ) // will return **true**
+str.isCC(); // will return **true**
 ```
 
 ##Special Date functions (added in v1.2)
