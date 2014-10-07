@@ -34,6 +34,24 @@ if(is.desktop()){
 }
 ```
 
+###How to use:
+First of all you need to add is.js to your website, before your main javascript:
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>My homepage</title>
+</head>
+<body>
+	
+	<script src="is.min.js"></script> <!-- insert is.js -->
+	<script src="main.js"></script>   <!-- your main javascript -->
+</body>
+</html>
+```
+After that you have already finished with the installation. Inside your main script you can already start using is.js!
+
 ##Object functions
 ```js
 isArray()
