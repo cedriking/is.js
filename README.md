@@ -73,12 +73,17 @@ isSameType(obj2)
 isString()
 isType(type)
 isBlank() // new in version 1.2
+
+// This functions can be used anytime with any object.
+// Example:
+var str = 'this is a string';
+str.isString(); // will return **true**
 ```
 
 ##Special String functions (added in v1.3)
 ```js
-var str = "this is my string";
-str.isCC( /* optional type */ ) // Credit Card, also you can use str.isCreditCard()
+isCC()
+isCreditCard()
 isEmail()
 isLatLng() or isLatLong()
 isPhone( /* optional country code, default = 'us' */ )
@@ -98,14 +103,16 @@ ar, au, ca, fr, is, uk and us
 Country codes for isZip are:
 ar, au, at, be, br, ca, dk, de, es, gb, hu, is, it, jp, lu, nl, pl, se and us
 */
+
+// Example:
+var str = "5196255216134695";
+str.isCC( /* optional type */ ) // will return **true**
 ```
 
 ##Special Date functions (added in v1.2)
 ```js
-var d = new Date();
-d.isWeekend(); // return true if is a weekend.
-d.isValid(); // return true.
-
+isWeekend()
+isValid()
 isPast( /* optional date */ )
 isFuture( /* optional date */ )
 isWeekday()
@@ -122,6 +129,11 @@ var d2 = new Date();
 d.isPast( d2 ); // d is past of d2, true
 d.isFuture( d2 ); // d is future of d2, false
 */
+
+// Example:
+var d = new Date();
+d.isWeekend(); // return true if is a weekend.
+d.isValid(); // return true.
 ```
 
 ##Core functions
@@ -155,6 +167,9 @@ windows()
 mac()
 unix()
 linux()
+
+// Example:
+var ie = is.ie(); // Will return **true** if you are currently on Internet Explorer
 ```
 
 ###Change Log:
