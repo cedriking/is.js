@@ -72,7 +72,6 @@ isRegExp()
 isSameType(obj2)
 isString()
 isType(type)
-isBlank() // new in version 1.2
 
 // This functions can be used anytime with any object.
 // Example:
@@ -88,6 +87,7 @@ isEmail()
 isLatLng() or isLatLong()
 isPhone( /* optional country code, default = 'us' */ )
 isZip( /* optional country code, default = 'us' */ )
+isBlank()
 
 /*
 isCC and isCreditCard have the parameter type, where you can pass a string:
