@@ -1,13 +1,13 @@
+
 /* 
 is.js 1.3 ~ Copyright (c) 2012-2014 Cedrik Boudreau
 https://github.com/Cedriking/is.js
 http://isjs.quipoapps.com
 is.js may be freely distributed under the MIT Licence.
-*/
+ */
 
 
-/* Fixing ECMA262-5 array method if not supported natively ( old IE versions )*/
-
+/* Fixing ECMA262-5 array method if not supported natively ( old IE versions ) */
 
 (function() {
   var exports;
@@ -109,8 +109,8 @@ is.js may be freely distributed under the MIT Licence.
         return this.trim().length === 0;
       }
     });
-    /* d = new Date()*/
 
+    /* d = new Date() */
     extend(dateP, {
       isPast: function(d) {
         if (d == null) {
@@ -131,10 +131,16 @@ is.js may be freely distributed under the MIT Licence.
         return this.getUTCDay() === 0 || this.getUTCDay() === 6;
       },
       isBefore: function(d) {
-        return this.getTime() < d.getTime();
+        if (d == null) {
+          d = this;
+        }
+        return this.isPast(d);
       },
       isAfter: function(d) {
-        return this.getTime() > d.getTime();
+        if (d == null) {
+          d = this;
+        }
+        return this.isFuture(d);
       },
       isLeapYear: function() {
         var year;
@@ -146,8 +152,8 @@ is.js may be freely distributed under the MIT Licence.
       }
     });
     extend(stringP, {
-      /* Added in version 1.3*/
 
+      /* Added in version 1.3 */
       isCC: function(type) {
         var regex;
         if (type == null) {
@@ -170,7 +176,10 @@ is.js may be freely distributed under the MIT Licence.
         return regex.test(this);
       },
       isCreditCard: function(type) {
-        return this.cc(this, type);
+        if (type == null) {
+          type = 'any';
+        }
+        return this.isCC(type);
       },
       isEmail: function() {
         return /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(this);
@@ -201,7 +210,7 @@ is.js may be freely distributed under the MIT Licence.
             case 'uk':
               return /^(?:\+|044)?(?:\s+)?\(?(\d{1,5}|\d{4}\s*\d{1,2})\)?\s+|-(\d{1,4}(\s+|-)?\d{1,4}|(\d{6}))\d{6}$/;
             case 'us':
-              return /^(\d{3})(:?[\s\-])*(\d{3})(:?[\s\-])*(\d{4})$/;
+              return /^(1-?)?(\d{3})(:?[\s\-])*(\d{3})(:?[\s\-])*(\d{4})$/;
           }
         })();
         return regex.test(this);
@@ -241,10 +250,8 @@ is.js may be freely distributed under the MIT Licence.
               return /^\d{5}$/;
             case 'jp':
               return /^\d{3}-\d{4}$/;
-            case 'lu':
-              return /^(L\s*(-|—|–))\s*?[\d]{4}$/;
             case 'nl':
-              return /^[1-9]\d{3}\s?[a-zA-Z]{2}$/;
+              return /^\d{4}$/;
             case 'pl':
               return /^\d{2}\-\d{3}$/;
             case 'se':
@@ -262,22 +269,22 @@ is.js may be freely distributed under the MIT Licence.
         return /msie/i.test(ua);
       },
       ie6: function() {
-        return /msie/i.test(ua);
+        return /msie 6/i.test(ua);
       },
       ie7: function() {
-        return /msie/i.test(ua);
+        return /msie 7/i.test(ua);
       },
       ie8: function() {
-        return /msie/i.test(ua);
+        return /msie 8/i.test(ua);
       },
       ie9: function() {
-        return /msie/i.test(ua);
+        return /msie 9/i.test(ua);
       },
       ie10: function() {
-        return /msie/i.test(ua);
+        return /msie 10/i.test(ua);
       },
       ie11: function() {
-        return /msie/i.test(ua);
+        return /Trident.*rv[ :]*11\./.test(ua);
       },
       firefox: function() {
         return /firefox/i.test(ua);

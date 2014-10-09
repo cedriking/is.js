@@ -81,13 +81,13 @@ str.isString(); // will return **true**
 
 ##Special String functions (added in v1.3)
 ```js
+isBlank()
 isCC( /* optional type */ )
 isCreditCard( /* optional type */ )
 isEmail()
 isLatLng() or isLatLong()
 isPhone( /* optional country code, default = 'us' */ )
 isZip( /* optional country code, default = 'us' */ )
-isBlank()
 
 /*
 isCC and isCreditCard have the parameter type, where you can pass a string:
@@ -101,7 +101,7 @@ Country codes for isPhone are:
 ar, au, ca, fr, is, uk and us
 
 Country codes for isZip are:
-ar, au, at, be, br, ca, dk, de, es, gb, hu, is, it, jp, lu, nl, pl, se and us
+ar, au, at, be, br, ca, dk, de, es, gb, hu, is, it, jp, nl, pl, se and us
 */
 
 // Example:
@@ -111,16 +111,14 @@ str.isCC(); // will return **true**
 
 ##Special Date functions (added in v1.2)
 ```js
-isWeekend()
-isValid()
-isPast( /* optional date */ )
+isAfter(date)
+isBefore(date)
 isFuture( /* optional date */ )
+isLeapYear()
+isPast( /* optional date */ )
+isValid()
 isWeekday()
 isWeekend()
-isBefore(date)
-isAfter(date)
-isLeapYear()
-isValid()
 /*
 Some date functions have been changed in v1.3
 to receive an optional Date to compare example:
