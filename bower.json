@@ -1,0 +1,28 @@
+{
+  "name": "is.js",
+  "repo": "Cedriking/is.js",
+  "version": "1.4",
+  "description": "Micro javascript library to use in conditions.",
+  "main": "is.min.js",
+  "moduleType": [
+  	"amd"
+    "globals"
+  ],
+  "keywords": ["is.js", "conditions", "javascript", "objects", "validator", "validate", "string", "validate", "dates", "validate", "objects"],
+  "authors": [
+    "Cedrik Boudreau ( @Cedriking )"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/Cedriking/is.js",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests",
+    "Gruntfile.js",
+    "components.json",
+    "package.json",
+    "qunit-test"
+  ]
+}
