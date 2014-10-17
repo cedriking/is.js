@@ -5,7 +5,7 @@
   "description": "Micro javascript library to use in conditions.",
   "main": "is.min.js",
   "moduleType": [
-  	"amd"
+  	"amd",
     "globals"
   ],
   "keywords": ["is.js", "conditions", "javascript", "objects", "validator", "validate", "string", "validate", "dates", "validate", "objects"],
