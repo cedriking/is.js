@@ -1,5 +1,5 @@
 
-/* 
+/*
 is.js 1.4 ~ Copyright (c) 2012-2014 Cedrik Boudreau
 https://github.com/Cedriking/is.js
 http://isjs.quipoapps.com
@@ -49,7 +49,7 @@ is.js may be freely distributed under the MIT Licence.
     };
     each = function(elements, callback) {
       var element, key, _i, _len;
-      if (typeof elements === 'array') {
+      if (isClass(elements) === 'Array') {
         for (_i = 0, _len = elements.length; _i < _len; _i++) {
           element = elements[_i];
           if (!callback.call(element, _i, element)) {
