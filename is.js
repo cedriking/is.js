@@ -12,15 +12,14 @@ is.js may be freely distributed under the MIT Licence.
 (function() {
   var exports;
 
-  if (Array.prototype.forEach == null) {
+  if (!Array.prototype.forEach) {
     Array.prototype.forEach = function(func, option) {
-      var len, _i, _len;
+      var i;
       if (typeof func !== 'function') {
         throw new TypeError();
       }
-      for (_i = 0, _len = this.length; _i < _len; _i++) {
-        len = this[_i];
-        func.call(option, len, _i, this);
+      for (i = 0; i < this.length; i++) {
+        func.call(option, this[i], i, this);
       }
     };
   }
