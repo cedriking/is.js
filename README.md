@@ -1,7 +1,7 @@
-#is.js
+# is.js
 is.js is a micro javascript library that helps you with conditions.
 
-###Examples:
+### Examples:
 
 ```js
 // Object functions:
@@ -34,7 +34,7 @@ if(is.desktop()){
 }
 ```
 
-###How to use:
+### How to use:
 First of all you need to add is.js to your website, before your main javascript:
 ```html
 <!DOCTYPE html>
@@ -52,7 +52,7 @@ First of all you need to add is.js to your website, before your main javascript:
 ```
 After that you have already finished with the installation. Inside your main script you can already start using is.js!
 
-##Object functions
+## Object functions
 ```js
 isArray()
 isBoolean()
@@ -79,7 +79,7 @@ var str = 'this is a string';
 str.isString(); // will return **true**
 ```
 
-##Special String functions (added in v1.3)
+## Special String functions (added in v1.3)
 ```js
 isBlank()
 isCC( /* optional type */ )
@@ -109,7 +109,7 @@ var str = "5196255216134695";
 str.isCC(); // will return **true**
 ```
 
-##Special Date functions (added in v1.2)
+## Special Date functions (added in v1.2)
 ```js
 isAfter(date)
 isBefore(date)
@@ -134,7 +134,7 @@ d.isWeekend(); // return true if is a weekend.
 d.isValid(); // return true.
 ```
 
-##Core functions
+## Core functions
 ```js
 // Browsers
 ie()
@@ -170,7 +170,7 @@ linux()
 var ie = is.ie(); // Will return **true** if you are currently on Internet Explorer
 ```
 
-###Change Log:
+### Change Log:
 #### Version 1.3
 - Added new validators and comparators
 - Add new functions for strings
